@@ -1,2 +1,1 @@
-# Resume
-My Curriculum Vitae
+[Resume](CV.pdf)
