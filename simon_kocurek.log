@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2018.2.21)  10 MAR 2018 11:09
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2018.2.21)  11 MAR 2018 21:43
  restricted \write18 enabled.
 **simon_kocurek.
 (./simon_kocurek.tex
@@ -213,7 +213,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.058 seconds)
+luaotfload | main : initialization completed in 0.062 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -977,7 +977,7 @@ ute_list, 1 write nodes
  57i,15n,67p,775b,544s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Bold.ttf></usr/share/fo
 nts/truetype/msttcorefonts/Times_New_Roman.ttf>
-Output written on simon_kocurek.pdf (1 page, 67632 bytes).
+Output written on simon_kocurek.pdf (1 page, 67888 bytes).
 
 PDF statistics: 22 PDF objects out of 1000 (max. 8388607)
  12 compressed objects within 1 object stream
