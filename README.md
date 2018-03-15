@@ -1,1 +1,1 @@
-[Resume](CV.pdf)
+[Resume](simon_kocurek.pdf)
