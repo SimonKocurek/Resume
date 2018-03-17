@@ -1,20 +1,24 @@
-% The font could be set to Windows-specific Calibri by using the 'calibri' option
-\documentclass[]{mcdowellcv}
+\documentclass[]{style}
 
-% For mathematical symbols
 \usepackage{amsmath}
 
-% Set applicant's personal data for header
 \name{Šimon Kocúrek}
 \address{Dúbravka 128, Košice \linebreak Slovakia 07215}
 \contacts{+421 918 317 310 \linebreak simon.kocurek@gmail.com}
 
 \begin{document}
 
-	% Print the header
 	\makeheader
 	
-	% Print the content
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Slovakia}{University of Pavol Jozef Šafárik}{2016 — present}
+			\begin{itemize}
+				\item Studying for Bachelor's degree in Applied Computer Science, In-major GPA: 3.62.
+				\item Selected Coursework: Programming and Algorithms, Computer Networking, Project I, Operating Systems, Databases, Structured Formats and Data Representation.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
 	\begin{cvsection}{Employment}
 		\begin{cvsubsection}{Full Stack Developer (Part-time)}{www.lumeer.io}{Jul 2017 — present}
 			GitHub: github.com/Lumeer
@@ -23,15 +27,6 @@
 				\item Improved performance of one of data visualizations by 900\%.
 				\item Helped increase the backend stability by finding and fixing critical bugs.
 				\item Implemented notifications used by the whole application.
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
-	
-	\begin{cvsection}{Education}
-		\begin{cvsubsection}{Slovakia}{University of Pavol Jozef Šafárik}{2016 — present}
-			\begin{itemize}
-				\item Studying for Bachelor's degree in Applied Computer Science, In-major GPA: 3.62.
-				\item Selected Coursework: Programming and Algorithms, Computer Networking, Project I, Operating Systems, Databases, Structured Formats and Data Representation.
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
