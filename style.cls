@@ -1,5 +1,27 @@
-\ProvidesClass{style}[]
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+\ProvidesClass{style}[2015/12/15 v1.1.0 McDowell CV class]
 
+% Set up the fonts according to options
 \def\mainfontsize{11pt}
 \def\mainfontface{Times New Roman}
 
@@ -17,8 +39,6 @@
 
 % Set font face
 \usepackage{fontspec}
-\usepackage[activate,final]{microtype}
-\setmainfont[Ligatures=TeX,Renderer=Basic]{Times New Roman}
 
 % Remove paragraph indentation
 \usepackage[parfill]{parskip} 
@@ -44,51 +64,28 @@
 % separation to a negative value to suppress a single parskip before lists
 \setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
 
-% For adjusting spacing based on the platform used
-\usepackage{ifthen}
-\usepackage{ifplatform}
-
 % For spcaed small caps
 \usepackage{microtype}
 
 \DeclareMicrotypeSet*{smallcapsi} { 
 	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
-	shape = {sc*,si,scit}
+	shape    = {sc*,si,scit}
 }
 
 %--------------------------------------------------------------------------------
 %                                    Constants                                  -
 %--------------------------------------------------------------------------------
-
-\ifthenelse{\equal{\platformname}{\notwindowsname}}{
-	\def\namespaceskip{0.575em}
-	\def\afterheaderspace{1.1pt}
-	\def\beforesectionheaderspace{5pt}
-	\def\sectionheadermargin{6pt}
-	\def\beforesectionheaderhrulespace{2.85pt}
-	\def\sectionheaderhrlueheight{0.518pt}
-	\def\aftersectionheaderspace{-5.8pt}
-	\def\aftersinglelinesubsectionheaderspace{-20.25pt}
-	\def\afterdoublelinesubsectionheaderspace{-11.75pt}
-	\def\aftermultilinesubsectionheaderspace{-7.75pt}
-	\def\afteremptysubsectionheaderspace{1.25pt}
-	\def\subsectionmargin{9pt}
-	\def\aftersubsectionspace{2.1pt}
-}{
-	\def\namespaceskip{0.4em}
-	\def\afterheaderspace{3pt}
-	\def\beforesectionheaderspace{4.75pt}
-	\def\sectionheadermargin{6pt}
-	\def\beforesectionheaderhrulespace{3pt}
-	\def\sectionheaderhrlueheight{0.5pt}
-	\def\aftersectionheaderspace{-4pt}
-	\def\aftersinglelinesubsectionheaderspace{-18.5pt}
-	\def\afterdoublelinesubsectionheaderspace{-10pt}
-	\def\aftermultilinesubsectionheaderspace{-6pt}
-	\def\afteremptysubsectionheaderspace{3pt}
-	\def\subsectionmargin{9pt}
-	\def\aftersubsectionspace{4pt}
-}
+\def\afterheaderspace{3pt}
+\def\beforesectionheaderspace{4.75pt}
+\def\sectionheadermargin{6pt}
+\def\aftersectionheaderspace{-4pt}
+\def\sectionheaderhrlueheight{0.5pt}
+\def\aftersinglelinesubsectionheaderspace{-6pt}
+\def\afterdoublelinesubsectionheaderspace{0pt}
+\def\aftermultilinesubsectionheaderspace{-6pt}
+\def\afteremptysubsectionheaderspace{3pt}
+\def\subsectionmargin{9pt}
+\def\aftersubsectionspace{3pt}
 
 %--------------------------------------------------------------------------------
 %                            Header Setup and Printing                          -
@@ -113,9 +110,6 @@
 \name{}
 
 \newcommand\printname{
-	\typeout {kokoko}
-	\typeout \spaceskip
-	\spaceskip \namespaceskip \relax
 	\textbf{\LARGE\textls[110]{\textsc{\@name}}}
 }
 
@@ -156,7 +150,7 @@
 	\begin{adjustwidth}{\sectionheadermargin}{\sectionheadermargin}
 		\textsc{\textbf{#1}}
 	\end{adjustwidth}
-	\vspace*{\beforesectionheaderhrulespace}
+	\smallskip
 	\hrule height \sectionheaderhrlueheight
 	\vspace*{\aftersectionheaderspace}
 }{}
